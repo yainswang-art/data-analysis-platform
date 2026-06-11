@@ -4,11 +4,10 @@ app = FastAPI()
 
 @app.get("/")
 def home():
-    return {"message": "Data Analysis API is running 🚀"}
+    return {"message": "API running 🚀"}
 
 @app.get("/data")
-def get_data():
+def data():
     return {
-        "sales": [100, 200, 150, 300],
-        "profit": [20, 50, 30, 80]
+        "sales": [100, 200, 150, 300]
     }
