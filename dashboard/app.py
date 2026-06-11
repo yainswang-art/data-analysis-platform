@@ -1,3 +1,5 @@
+st.write("🔥 PAGE LOADED")
+
 import streamlit as st
 import pandas as pd
 
