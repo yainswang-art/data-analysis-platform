@@ -1,16 +1,9 @@
 import streamlit as st
-import requests
 
-st.title("📊 Data Dashboard (Connected to API)")
+st.title("🔥 Streamlit Test Page")
 
-# 调用你的 FastAPI
-res = requests.get("http://localhost:10000/data")
-data = res.json()
+st.write("If you see this → Streamlit is working")
 
-st.write("📦 API Data:", data)
+st.success("UI rendering OK 🚀")
 
-st.subheader("Sales")
-st.line_chart(data["sales"])
-
-st.subheader("Profit")
-st.bar_chart(data["profit"])
+st.line_chart([10, 20, 30, 40])
