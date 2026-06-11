@@ -1,16 +1,13 @@
 import streamlit as st
-import pandas as pd
+import requests
 
-st.set_page_config(page_title="Data Platform", layout="wide")
+st.title("📊 Data Dashboard (Connected to API)")
 
-st.title("📊 Data Analysis Platform")
+# 调用你的 FastAPI
+res = requests.get("http://localhost:10000/data")
+data = res.json()
 
-st.write("If you can see this → Dashboard is working 🚀")
-
-data = pd.DataFrame({
-    "sales": [100, 200, 150, 300],
-    "profit": [20, 50, 30, 80]
-})
+st.write("📦 API Data:", data)
 
 st.subheader("Sales")
 st.line_chart(data["sales"])
