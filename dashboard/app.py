@@ -1,4 +1,4 @@
-import streamlit as st
+print("🔥 RUNNING THIS FILE")
 
-st.write("🔥 STREAMLIT IS RUNNING")
-st.title("TEST PAGE")
+import streamlit as st
+st.write("🔥 THIS IS THE ACTIVE STREAMLIT FILE")
